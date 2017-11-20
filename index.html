@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"
+    />
+    <title>x-gulp</title>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css" />
+</head>
+
+<body>
+
+    <script src="./static/js/lib/xxx.js"></script>
+    <script>
+        var vars = window.vars || {};
+        var href = location.href;
+        vars.alias = {
+            jquery: 'jquery',
+            jweixin: '//res.wx.qq.com/open/js/jweixin-1.2.0.js',
+            plupload: '//cdn.bootcss.com/plupload/2.1.2/plupload.full.min.js',
+            uuid: '//cdn.bootcss.com/node-uuid/1.4.8/uuid.min.js',
+            aliOSS: 'module/aliOSS'
+        }
+        vars.entry = 'entry/index';
+
+        vars.base = '/static/js';
+        // 如果链接中含有@debug，加载dev代码
+        if (/@debug/.test(href)) {
+            vars.base = '/src/js';
+        }
+        // 配置xxx.js
+        xxx.config({
+            base: vars.base,
+            // 别名，利于较长的模块名的简化
+            alias: vars.alias,
+            paths: {},
+            ver: /@random/.test(href) ? new Date().getTime() : '2017010101',
+            vars: vars
+        });
+        // 调用入口模块
+        xxx(vars.entry, function () {
+            vars.callback && vars.callback();
+            console.log(vars.entry + ' 执行完成');
+        });
+
+        window.xLog = function (log) {
+            if (vars.debug || /@debug/.test(href)) {
+                return console.log(log);
+            }
+        }
+    </script>
+</body>
+
+
+</html>

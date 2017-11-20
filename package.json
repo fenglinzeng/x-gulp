@@ -1,0 +1,28 @@
+{
+  "name": "xxx",
+  "version": "0.0.1",
+  "author": "@brofen",
+  "description": "A simple and smart gulp workflow for f2e.",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.4",
+    "@babel/preset-env": "^7.0.0-beta.3",
+    "chalk": "^2.1.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-babel": "^8.0.0-beta.2",
+    "gulp-changed": "^3.1.0",
+    "gulp-clean-css": "^3.8.0",
+    "gulp-compass": "^2.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csscomb": "^3.0.8",
+    "gulp-imagemin": "^3.4.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-zip": "^3.0.2",
+    "imagemin-pngquant": "^5.0.1"
+  }
+}
