@@ -1,2 +1,10 @@
 $red: #ff0000;
 $orange: #f90;
+$gray: #909090;
+$lightgray: #d7d7d7;
+
+@mixin word-wrap {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
