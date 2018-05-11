@@ -82,6 +82,10 @@
     }
 }
 
+.banners .w {
+    position: relative;
+}
+
 .category {
     width: 215px;
     position: relative;
@@ -129,6 +133,25 @@
             font-size: 8px;
             color: #ccc;
         }
+    }
+}
+
+.category-pop {
+    position: absolute;
+    left: 215px;
+    top: 0;
+    width: 600px;
+    background-color: #fff;
+    min-height: 440px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
+    display: none;
+    .cate-pop__item-l {
+        width: 400px;
+        float: left;
+    }
+    .cate-pop__item-r {
+        width: 200px;
+        float: right;
     }
 }
 

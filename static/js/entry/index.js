@@ -1,1 +1,1 @@
-"use strict";$(document).ready(function(){console.log("ok")});
+"use strict";define("entry/index",[],function(require){console.log("ok");var categoryPop=$(".category-pop");var category=$("#category");category.on("mousemove",".cat-item",function(){var id=$(this).index();console.log(id);categoryPop.hide().eq(id).show()}).on("mouseout",function(){categoryPop.hide()})});
